@@ -1,0 +1,46 @@
+{
+  "id": "c005b050-e490-11e5-a66d-ff531f710845",
+  "name": "bundleexectask",
+  "friendlyName": "Bundle Exec",
+  "description": "Run bundle exec",
+  "author": "James Carscadden",
+  "helpMarkDown": "This task will run 'bundle exec' with the specified arguments in the top level directory of your code checkout",
+  "category": "Utility",
+  "visibility": [
+    "Build"
+  ],
+  "demands": [
+    "ruby"
+  ],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.83.0",
+  "instanceNameFormat": "Bundle Exec $(command)",
+  "inputs": [
+    {
+      "name": "arg",
+      "type": "string",
+      "label": "Arguments",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The arguments to add to bundle exec."
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "label": "Message",
+      "defaultValue": "Hello World",
+      "required": true,
+      "helpMarkDown": "Message to echo out"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "bundle.js",
+      "argumentFormat": ""
+    }
+  }
+}
