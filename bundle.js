@@ -4,6 +4,7 @@ var tl = require('vso-task-lib');
 var bundle = new tl.ToolRunner(tl.which('bundle', true));
 var bundleArg = tl.getInput('arg', true);
 
+bundle.arg('exec');
 bundle.arg(bundleArg);
 
 bundle.exec({ failOnStdErr: false})
